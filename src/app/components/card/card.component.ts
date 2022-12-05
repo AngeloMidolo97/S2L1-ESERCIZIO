@@ -11,6 +11,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CardComponent implements OnInit {
 
+  loading = true;
+
   sub!: Subscription
 
   cards: Post[] | undefined;
@@ -25,6 +27,7 @@ export class CardComponent implements OnInit {
     this.sub = this.postSrv.get().subscribe((ris) => {
       console.log(ris);
       this.cards = ris;
+      this.loading = false;
     })
   }
 
