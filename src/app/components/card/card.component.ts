@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Post } from 'src/app/module/post';
 import { PostService } from 'src/app/service/post.service';
-import { Subscription, Observable } from 'rxjs';
+import { Subscription } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
