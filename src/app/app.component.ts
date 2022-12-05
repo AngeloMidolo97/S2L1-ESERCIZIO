@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PostService } from './service/post.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'S2L1-ESERCIZIO';
+
+  count: number = 0;
+
+  constructor(private postSrv: PostService) {}
+
+  ngOnInit() {
+    this.postSrv.likeO.subscribe(() => {
+      this.count++
+    })
+  }
 }

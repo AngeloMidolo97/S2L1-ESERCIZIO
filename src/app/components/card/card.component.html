@@ -1,0 +1,10 @@
+<div class="container d-flex flex-wrap">
+  <div *ngFor="let card of cards" class="card m-3" style="width: 18rem;">
+    <img src={{card.thumbnailUrl}} class="card-img-top">
+    <div class="card-body">
+      <h5 class="card-title">{{card.title}}</h5>
+      <button type="button" class="btn btn-danger tect-light mx-3" (click)="cancellaCard(card.id)">Elimina</button>
+      <button type="button" class="btn btn-success text-light" (click)="miPiace()">Mi Piace</button>
+    </div>
+  </div>
+</div>
